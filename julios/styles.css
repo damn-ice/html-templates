@@ -1,0 +1,423 @@
+/* Global Styling */
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family:'Nunito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 5rem 0;
+}
+/* Header */
+
+header{
+    width: 100%;
+    height: 5rem;
+    /* overflow: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(241, 241, 245, 0.3);
+}
+
+.nav-brand{
+    width: 6rem;
+}
+
+.menu-icon i {
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+.close i {
+    color: orange
+}
+
+.nav-list{
+    width: 25rem;
+    height: 100vh;
+    position: fixed;
+    background-color:paleturquoise;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 650ms ease-in-out;
+}
+.nav-list.active {
+    right: 0;
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+.nav-item {
+    margin: 1.5rem 0;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+/* <---- HERO ---> */
+
+.hero{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("images/header-bg.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4.7rem;
+    background: url("images/wave-small.png") center no-repeat;
+    background-size: cover;
+}
+
+.main-message {
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform: translateY(20%);
+}
+
+.main-message h3{
+    font-size: 1.6rem;
+}
+
+.main-message h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.main-message p {
+    text-transform: lowercase;
+}
+
+.btn {
+    background-color: #eb648c;
+    border-radius: 3rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+.btn:hover {
+    background-color: #5301a0;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+/* Experience---Outdoors */
+
+.experience-outdoors {
+    padding: 0;
+}
+.title-heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.title-heading h3{
+    font-size: 1.4rem;
+}
+
+.title-heading h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.title-heading p{
+    text-transform: lowercase;
+}
+
+.activity-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.activity-grid-item {
+    height: 40rem;
+    padding: 5rem;
+    position: relative;
+    display: flex;
+    color: #fafafa;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    /* background-image: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%); */
+}
+
+/* .activity-grid-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%);
+    z-index: -1;
+} */
+
+.star-gazing{
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("images/stars.jpg") center no-repeat;
+}
+
+.hiking{
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("images/hiking.jpg") center no-repeat;
+}
+.camping{
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("images/camping.jpg") center no-repeat;
+}
+
+.activity-grid-item i {
+    font-size: 4rem;
+    color: #eb648c;
+}
+
+.activity-grid-item h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+/* Testimonials */
+
+.testimonials{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("images/testimonials-bg.jpg") center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+.testimonials::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 100%;
+    height: 4.7rem;
+    background: url("images/wave-small-reversed.png") center no-repeat;
+    background-size: cover;
+}
+
+.testimonial{
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+}
+
+.testimonial-text-box{
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+.testimonial-text-box i {
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: #eb648c;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.testimonial-customer img {
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #eb648c;
+}
+
+/* Begin Adventures */
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.adventure-grid-item p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+footer{
+    padding: 2.5rem 0;
+    text-align: center;
+    background-color: #d7d4ed;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 350px){
+    .main-message{
+        transform: translateY(40%);
+    }
+}
+
+@media screen and (min-width: 470px){
+    .hero::before{
+        height: 9.4rem;
+        background: url("images/wave-medium.png") center no-repeat;
+        background-size: cover;
+    }
+    .testimonials::before{
+        height: 9.4rem;
+        background: url("images/wave-medium-reversed.png") center no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 700px){
+    header {
+        height: 8rem;
+    }
+    .nav-brand{
+        width: 8rem;
+    }
+
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        transition: initial;
+        flex-direction: row;
+    }
+    .menu-icon {
+        display: none;
+    }
+    .nav-item{
+        margin: 0 2rem;
+    }
+    .nav-link, .current{
+        color: #fafafa;
+        position: relative;
+    }
+    .nav-link::before, .current::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        background-color: #eb648c;
+        width: 100%;
+        height: 3px;
+        border-radius: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 1000ms ease-in-out;
+    }
+    .current::before{
+        transform: scaleX(1);
+    }
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+    .hero{
+        height: 60vh;
+    }
+    .main-message{
+        transform: translateY(50%);
+    }
+    .title-heading h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .hero::before{
+        height: 22.7rem;
+        background: url("images/wave-large.png") center no-repeat;
+        background-size: cover;
+    }
+    .testimonials::before{
+        height: 22.7rem;
+        background: url("images/wave-large-reversed.png") center no-repeat;
+        background-size: cover;
+    }
+
+}
+@media screen and (min-width: 1200px){
+    .hero{
+        height: 85vh;
+    }
+    .testimonials{
+        height: 85vh;
+    }
+}
